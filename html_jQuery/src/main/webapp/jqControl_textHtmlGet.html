@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1><span>Header - 0</span></h1>
+    <h1><span>Header - 1</span></h1>
+    
+    
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" ></script>
+	<script>
+	   // 변수를 선언합니다.
+	    var text = $('h1').text();
+	    var html = $('h1').html();
+	
+	    // 출력합니다.
+		alert(text);
+	    alert(html);
+	    
+	    
+	     $('h1').html("<span>아무 음악이나 틀어</span>");
+	</script>
+</body>
+</html>

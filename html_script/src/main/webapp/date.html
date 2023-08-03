@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 id="demo"></h1>
+	
+	
+<script>
+	function printout(){
+		//Date 객체를 선언합니다: 현재 시간 측정
+		var date = new Date();
+		
+		// 요소를 추출합니다.
+		var year = date.getFullYear();
+		var month = date.getMonth() + 1;
+		var day = date.getDay();
+		
+		var hours = decimalFormat(date.getHours());
+		var minutes = decimalFormat(date.getMinutes());
+		var seconds = decimalFormat(date.getSeconds());
+		
+		var time = year+"년 "+month+"월 "+day+"일 "+hours+":"+minutes+":"+seconds;
+		document.querySelector("h1#demo").innerHTML=time;
+	}
+	
+	setInterval(printout,1000);
+
+	function decimalFormat(number){
+		if(number<10){
+			return "0"+number;
+		}else{
+			return number;
+		}
+	}
+</script>
+</body>
+</html>
+
+
+

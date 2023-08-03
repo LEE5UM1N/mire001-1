@@ -1,0 +1,34 @@
+<script>
+
+	var score = {
+		kor:90,
+		eng:85,
+		math:50,
+		scien:90,
+		total:function(){
+			return this.kor+this.eng+this.math+this.scien;
+		},
+		avg:function(){
+			return this.total()/4;
+		}
+			
+	}
+
+	alert(score.total());
+	alert(score.avg());
+	
+	
+	var score = {
+			kor:90,
+			eng:85,
+			math:50,
+			scien:90
+		}
+	score.total=score.kor+score.eng+score.math+score.scien;
+	score.avg=score.total/4;
+	alert(acore.total);
+	alert(score.avg);
+</script>
+
+
+

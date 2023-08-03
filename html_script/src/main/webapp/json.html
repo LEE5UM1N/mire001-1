@@ -1,0 +1,33 @@
+<script>
+
+var data={
+	a:1,
+	b:"1",
+	c:false,
+	d:function(){alert("d value")},
+	e:[1,2,3,4],
+	f:{
+		aa:1,
+		bb:"1",
+		cc:false,
+		dd:function(){alert("d value")},
+		ee:[1,2,3,4],
+	}
+}
+
+function dataChoice(key1,key2){
+	alert(data[key1]);
+	alert(data[key1][key2]);
+	
+	alert(data.f);
+	alert(data.f.aa);
+}
+
+dataChoice("f","aa");
+</script>
+
+
+
+
+
+

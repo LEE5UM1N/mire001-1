@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+﻿<script>
+	
+
+    function callTenTimes(func) {
+        for (var i = 0; i < 10; i++) {
+            func();
+        }
+    }
+
+   var ff= function() {
+        alert('함수 호출');
+    };
+
+    callTenTimes(ff);
+</script>
+</body>
+</html>

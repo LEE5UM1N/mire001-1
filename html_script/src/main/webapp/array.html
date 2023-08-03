@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+/*	
+	var array = [1,"a",true,function(){alert("i am function");}];
+	
+	for(var i in array){
+		if(typeof(array[i])=="function") {
+			array[i]();
+		}
+	}
+	
+	for(var one of array){
+		alert(typeof(one));
+	}
+*/
+
+var intArr = [0,1,2,3];
+
+for(var one of intArr){
+	alert(one);
+}
+
+intArr[7]=4;
+for(var one of intArr){
+	alert(one);
+}
+
+</script>
+</body>
+</html>
+
+
+
+

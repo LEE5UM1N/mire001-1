@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <title>CSS3 Selector Basic</title>
+    <style>
+        /* input 태그가 사용 가능할 경우에
+           background-color 속성에 white 키워드를 적용합니다. */
+        input:enabled { background-color: white; }
+
+        /* input 태그가 사용 불가능할 경우에
+           background-color 속성에 gray 키워드를 적용합니다. */
+        input:disabled { background-color: gray; }
+
+        /* input 태그에 초점이 맞추어진 경우에
+           background-color 속성에 orange 키워드를 적용합니다. */
+        input:focus { background-color: orange; }
+       
+    </style>
+   
+</head>
+<body>
+    <h2>사용 가능</h2>
+    <input>
+    <h2>사용 불가능</h2>
+    <input disabled="disabled"/>
+    
+    <hr />
+    <input type="radio" name="job" id="dev" onchange="alert('개발자')"; /><label for="dev">개발자</label>
+    <input type="radio" name="job" id="cook" /><label for="cook">요리사</label>
+    <input type="radio" name="job" id="doc" /><label for="doc">의사</label>
+   
+   	<select onchange="alert(this.value);" >
+   		<option value="1" >1</option>
+   		<option value="2" >2</option>
+   		<option value="3" >3</option>
+   	</select> 
+    
+</body>
+</html>
+
+
+
+
+
+
+

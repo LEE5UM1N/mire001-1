@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>backgroundServlet</servlet-name>
+		<servlet-class>com.java.servlet.BackgroundServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>backgroundServlet</servlet-name>
+		<url-pattern>/background/css</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>lifeCycle</servlet-name>
+		<servlet-class>com.java.servlet.LifeCycleServlet</servlet-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>김형민</param-value>
+		</init-param>
+		<init-param>
+			<param-name>nickname</param-name>
+			<param-value>꿈삐로</param-value>
+		</init-param>
+		
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>lifeCycle</servlet-name>
+		<url-pattern>/lifecycle</url-pattern>
+	</servlet-mapping>
+
+</web-app>
+
+
+
+

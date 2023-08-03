@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.btn{
+		display:block;
+		
+		width:50px;
+		height:25px;
+		text-align:center;
+		line-height:25px;
+		
+		border:1px solid gray;
+		
+		font-weight:500;
+		font-size:10pt;
+		
+		text-decoration:none;
+		
+		cursor:pointer;
+	}
+	.btn-confirm{
+		background:#aaf;
+		color:#555;
+	}
+	.btn-cancle{
+		background:#f77;
+		color:#555;
+	}
+	.btn-wait{
+		background:#ff3;
+		color:#555;
+	}
+
+</style>
+</head>
+<body>
+	<p class="btn btn-cancle">당연하지</p>
+	
+	<a class="btn btn-wait" href="https://www.naver.com" >네이버</a>&nbsp;&nbsp;
+	<span class="btn btn-cancle" onclick="location.href='https://www.naver.com';" >취소</span>&nbsp;&nbsp;
+	<label class="btn btn-wait" >보류</label>
+</body>
+</html>
+
+
+

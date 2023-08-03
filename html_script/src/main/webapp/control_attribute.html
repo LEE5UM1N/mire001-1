@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text" name="a1"/><br/>
+	<input type="text" name="a2"/><br/>
+	<input type="text" name="a3"/><br/>
+	<input type="text" name="a4"/><br/>
+	<button onclick="change_go();">변경</button>
+</body>
+
+<script>
+ function change_go(){
+	var inputs = document.querySelectorAll("input");
+	
+	var type=["text","password","email","date"];
+	
+	for(var i=1;i<inputs.length+1;i++){
+		
+		inputs[i-1].setAttribute("type",type[i-1]);
+	}
+ }
+</script>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>rectangleServlet</servlet-name>
+		<servlet-class>com.java.servlet.RectangleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>rectangleServlet</servlet-name>
+		<url-pattern>/rectangle</url-pattern>
+	</servlet-mapping>
+</web-app>

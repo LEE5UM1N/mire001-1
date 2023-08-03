@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.circle{
+	width:100px;
+	height:100px;
+	border-radius:50px;
+	background:black;
+}
+.rectangle{
+	width:100px;
+	height:100px;
+	background:black;
+}
+
+</style>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="target"></div>
+	<button onclick="circle();" >circle</button><br/>
+	<button onclick="rectangle();">rectangle</button>
+	
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" ></script>
+<script>
+	function circle(){
+		$('div#target').removeClass("rectangle");
+		$('div#target').addClass("circle");
+	}
+	function rectangle(){
+		$('div#target').removeClass("circle");
+		$('div#target').addClass("rectangle");
+	}
+	
+</script>	
+</body>
+</html>

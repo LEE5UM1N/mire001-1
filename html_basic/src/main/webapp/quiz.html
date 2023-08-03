@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	div#box{
+		width:800px;
+		height:400px;
+		margin:0 auto;
+		background:yellow;
+	}
+	
+	div#box > div#box-header{
+		height:15%;
+		background:green;
+	}
+	div#box > div#box-body{
+		height:70%;
+		background:purple;
+	}
+	div#box > div#box-footer{
+		height:15%;
+		background:blue;
+		
+		position:relative;
+	}
+	
+	div#buttons{
+		position:absolute;
+		bottom:0;
+		
+		width:800px;
+	}
+	
+	div#buttons > div {
+		width:180px;
+		margin: 0 auto;
+		
+		box-sizing:border-box;
+		padding:5px;
+	}
+	
+	
+	
+	div#buttons button{
+		width:50px;
+		height:30px;
+	}
+</style>
+
+</head>
+<body>
+
+	<div id="box">
+		<div id="box-header"></div>
+		<div id="box-body"></div>
+		<div id="box-footer">
+			<div id="buttons">
+				<div>
+					<button>등록</button>
+					<button>수정</button>
+					<button>삭제</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
