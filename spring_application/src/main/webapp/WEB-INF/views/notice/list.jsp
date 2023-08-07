@@ -8,7 +8,7 @@
 <c:set var="pageMaker" value="${dataMap.pageMaker }" />
 <c:set var="command" value="${pageMaker.command }" />
 <c:set var="noticeList" value="${dataMap.noticeList }" />
-
+<body>
  <!-- Main content -->
 	<section class="content-header">
 	  	<div class="container-fluid">
@@ -36,6 +36,8 @@
 		<div class="card">
 			<div class="card-header with-border">
 				<button type="button" class="btn btn-primary" id="registBtn" onclick="OpenWindow('registForm.do','공지등록',700,800);">공지등록</button>				
+				
+				
 				<div id="keyword" class="card-tools" >
 					<div class="input-group row">
 						<select class="form-control col-md-3" name="perPageNum" id="perPageNum"
@@ -65,14 +67,17 @@
 				</div>			
 			</div>
 			<div class="card-body">
-				<table class="table table-bordered text-center" >					
+				<table class="table table-bordered table-striped" id="noticeTable" >	
+				   <thead>				
 					<tr style="font-size:0.95em;">
 						<th style="width:10%;">번 호</th>
 						<th style="width:50%;">제 목</th>
 						<th style="width:15%;">작성자</th>
 						<th>등록일</th>
 						<th style="width:10%;">조회수</th>
-					</tr>	
+					</tr>
+				   </thead>	
+				   <tbody>
 					<c:if test="${empty noticeList }" >
 						<tr>
 							<td colspan="5">
@@ -96,7 +101,8 @@
 							</td>
 							<td>${notice.viewcnt }</td>
 						</tr>
-					</c:forEach>			
+					</c:forEach>
+				   </tbody>			
 				</table>
 			</div>
 			<div class="card-footer">
@@ -105,6 +111,25 @@
 		</div>
 	</section>
 
+<script>
+window.onload=function(){
+	$("#noticeTable").DataTable({
+		"paging": false,
+	    "searching": false,
+	    "ordering": true,
+	    "info": false,
+    	"responsive": true, 
+    	"lengthChange": true, 
+    	"autoWidth": false,
+    	"buttons": ["copy", {
+    		extend: 'csv',
+            charset: 'utf-8',
+            bom: true
+    	}, "excel", "pdf", "print"]
+  	}).buttons().container().appendTo('#noticeTable_wrapper .col-md-6:eq(0)');
+}
+</script>
+</body>
 
 
 
