@@ -118,6 +118,8 @@
 			</div>
 		</div>
 	</section>
+<%@ include file="/WEB-INF/views/module/footer_js.jsp" %>
+
 <c:if test="${from eq 'regist'}">
 	<script>
 		alert("정상 등록되었습니다.");
@@ -125,3 +127,4 @@
 		window.opener.location.reload();
 	</script>
 </c:if>
+

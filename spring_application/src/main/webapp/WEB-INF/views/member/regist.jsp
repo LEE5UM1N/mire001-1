@@ -154,6 +154,9 @@
 </form>
 
 
+<%@ include file="/WEB-INF/views/module/footer_js.jsp" %>
+
+
 <script>
 function regist_go(){
    var uploadCheck = $('input[name="checkUpload"]').val();

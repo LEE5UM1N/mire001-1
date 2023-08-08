@@ -66,6 +66,11 @@
     <!-- /.content -->
 
 
+<%@ include file="/WEB-INF/views/module/footer_js.jsp" %>
+
+<!-- Summernote -->
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/summernote/summernote-bs4.min.js"></script>
+
 <script>
 function modify_submit(){
 	//alert("click modify btn");

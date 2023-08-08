@@ -81,6 +81,8 @@
 </form>
 
 
+<%@ include file="/WEB-INF/views/module/footer_js.jsp" %>
+
 <script>
 var formObj = document.querySelector("form[role='form']");
 

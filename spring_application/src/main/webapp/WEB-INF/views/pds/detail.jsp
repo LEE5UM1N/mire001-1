@@ -103,6 +103,10 @@
 		</div><!-- end row  -->		
 		
     </section>
+
+<%@ include file="/WEB-INF/views/module/footer_js.jsp" %>
+
+    
 <script>
 function submit_go(url, pno){
 	location.href=url+"?pno="+pno;

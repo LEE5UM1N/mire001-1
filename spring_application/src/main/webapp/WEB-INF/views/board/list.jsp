@@ -70,21 +70,24 @@
 				</div>						
 			</div>
 			<div class="card-body">
-				<table class="table table-bordered text-center" >					
+				<table class="table table-bordered table-striped" id="boardList">	
+				  <thead>				
 					<tr style="font-size:0.95em;">
 						<th style="width:10%;">번 호</th>
 						<th style="width:50%;">제 목</th>
 						<th style="width:15%;">작성자</th>
 						<th>등록일</th>
 						<th style="width:10%;">조회수</th>
-					</tr>				
+					</tr>
+				   </thead>				
 					<c:if test="${empty boardList }" >
 						<tr>
 							<td colspan="5">
 								<strong>해당 내용이 없습니다.</strong>
 							</td>
 						</tr>
-					</c:if>						
+					</c:if>	
+					<tbody>					
 					<c:forEach items="${boardList }" var="board">
 						<tr style='font-size:0.85em;'>
 							<td>${board.bno }</td>
@@ -110,6 +113,7 @@
 							<td><span class="badge bg-red">${board.viewcnt }</span></td>
 						</tr>
 					</c:forEach>
+					</tbody>
 				</table>				
 			</div>
 			<div class="card-footer">
@@ -118,6 +122,42 @@
 		</div>
 		
     </section>
+
+<%@ include file="/WEB-INF/views/module/footer_js.jsp" %>
+
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/jszip/jszip.min.js"></script>
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+<script>
+$("#boardList").DataTable({
+	"paging": false,
+    "searching": false,
+    "info": false,
+    "ordering": true,
+    "responsive": true, 
+    "lengthChange": false, 
+    "autoWidth": false,
+    "buttons": ["copy", 
+    	{
+			extend: 'csv',
+       		charset: 'utf-8',
+       		bom: true
+		},
+    	
+    	"excel", "pdf", "print"]
+  }).buttons().container().appendTo('#boardList_wrapper .col-md-6:eq(0)');
+</script>
+
 </body>
 
 

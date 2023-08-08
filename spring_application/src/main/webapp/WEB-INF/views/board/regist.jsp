@@ -64,6 +64,13 @@
 		</div><!-- end row -->
     </section>
 
+
+<%@ include file="/WEB-INF/views/module/footer_js.jsp" %>
+
+<!-- Summernote -->
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/summernote/summernote-bs4.min.js"></script>
+
+
 <script>
 	function regist_go(){
 		//alert("click regist btn");

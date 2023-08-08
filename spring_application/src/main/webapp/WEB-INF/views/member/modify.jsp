@@ -107,6 +107,9 @@
   </section>
     <!-- /.content -->    
   </div>
+
+<%@ include file="/WEB-INF/views/module/footer_js.jsp" %>
+
 <script>
 window.onload=function(){
    MemberPictureThumb('<%=request.getContextPath()%>');

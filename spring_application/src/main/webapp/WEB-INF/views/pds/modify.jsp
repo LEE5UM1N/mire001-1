@@ -4,7 +4,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <title>자료실 수정페이지</title>
 
-<body>
+
 <body>	
 	 <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -96,6 +96,13 @@
 		</div><!-- end row -->
     </section>
     <!-- /.content -->
+
+<%@ include file="/WEB-INF/views/module/footer_js.jsp" %>
+
+<!-- Summernote -->
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/summernote/summernote-bs4.min.js"></script>
+    
+    
 <script>
 window.onload=function(){
 	summernote_go($("#content"),"<%=request.getContextPath()%>");

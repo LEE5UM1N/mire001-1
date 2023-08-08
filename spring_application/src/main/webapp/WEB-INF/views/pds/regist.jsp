@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true"%>
-head>
+<head>
 </head>
 
 <title>자료등록</title>
@@ -81,6 +81,12 @@ head>
       </div>
       <!-- end row -->
    </section>
+
+<%@ include file="/WEB-INF/views/module/footer_js.jsp" %>
+
+<!-- Summernote -->
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/summernote/summernote-bs4.min.js"></script>
+
 
 <script>
 window.onload=function(){
